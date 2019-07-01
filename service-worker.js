@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Prueba-tecnica-Arkano/precache-manifest.162ad7e7250e5adfe455a2484dcb3c94.js"
+  "/Prueba-tecnica-Arkano/precache-manifest.054f68f5530c51217790eba98794c551.js"
 );
 
 self.addEventListener('message', (event) => {
