@@ -51,8 +51,10 @@ class Create extends Component {
 
   render() {
     const { name, quantity, increase, users, visits, date } = this.state;
+    if(window.location.pathname === "/") {
     return (
       <div class="container">
+        
         <Form onSubmit={this.onSubmit}>
           <Form.Group size="sm" controlId="formBasicEmail">
             <Form.Label>dashboard name</Form.Label>
@@ -121,6 +123,9 @@ class Create extends Component {
         </Form>
       </div>
     );
+  } else {
+    return null
+  }
   }
 }
 

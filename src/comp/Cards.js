@@ -36,6 +36,7 @@ class Cards extends Component {
     this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
   }
   render() {
+    if(window.location.pathname === "/dashboard") {
     return (
       // <Dash />
       <div >
@@ -94,6 +95,9 @@ class Cards extends Component {
         </div>
       </div>
     );
+  } else {
+    return null
+  }
   }
 }
 export default Cards;

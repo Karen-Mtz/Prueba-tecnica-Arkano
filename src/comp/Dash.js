@@ -15,6 +15,7 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Create from '../comp/Create';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import App from '../App'
+import Cards from './Cards';
 
 const drawerWidth = 240;
 
@@ -131,17 +132,17 @@ export default function Dashboard() {
       >
         <div className={classes.toolbarIcon}>
         </div>
-       <Link to="/dashboard"> <List>{mainListItems}</List></Link>
+      <Route path="/dashboard" component={App}><List>{mainListItems}</List></Route>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
+              <h3 className={classes.txt}>Dashboard <span className={classes.txtt}>Estadísticas</span></h3> 
+              <Route path="/dashboard" component={Cards}></Route>
           <Grid container spacing={3}>
             <Grid item xs={12} md={8} lg={9}>
-              <h3 className={classes.txt}>Dashboard <span className={classes.txtt}>Estadísticas</span></h3> 
-              <Paper className={fixedHeightPaper}>
-                <Route path="/" component={Create} />
-                <Route path="/dashboard" component={App} />
+              <Paper className={fixedHeightPaper}>  
+      <Route path="/" component={Create}></Route>
               </Paper>
             </Grid>
           </Grid>
