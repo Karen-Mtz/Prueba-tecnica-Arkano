@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Prueba-tecnica-Arkano/static/css/main.4a8790d3.chunk.css",
+    "main.css": "/Prueba-tecnica-Arkano/static/css/main.276490d8.chunk.css",
     "main.js": "/Prueba-tecnica-Arkano/static/js/main.e04ec8fa.chunk.js",
     "main.js.map": "/Prueba-tecnica-Arkano/static/js/main.e04ec8fa.chunk.js.map",
     "runtime~main.js": "/Prueba-tecnica-Arkano/static/js/runtime~main.2ae02a5b.js",
@@ -9,9 +9,9 @@
     "static/js/2.e4322cce.chunk.js": "/Prueba-tecnica-Arkano/static/js/2.e4322cce.chunk.js",
     "static/js/2.e4322cce.chunk.js.map": "/Prueba-tecnica-Arkano/static/js/2.e4322cce.chunk.js.map",
     "index.html": "/Prueba-tecnica-Arkano/index.html",
-    "precache-manifest.1d88c126c76587883b40f2b5730d3ba2.js": "/Prueba-tecnica-Arkano/precache-manifest.1d88c126c76587883b40f2b5730d3ba2.js",
+    "precache-manifest.ba2517d5d4e75ff18c554cd03a6759b4.js": "/Prueba-tecnica-Arkano/precache-manifest.ba2517d5d4e75ff18c554cd03a6759b4.js",
     "service-worker.js": "/Prueba-tecnica-Arkano/service-worker.js",
     "static/css/2.0624914a.chunk.css.map": "/Prueba-tecnica-Arkano/static/css/2.0624914a.chunk.css.map",
-    "static/css/main.4a8790d3.chunk.css.map": "/Prueba-tecnica-Arkano/static/css/main.4a8790d3.chunk.css.map"
+    "static/css/main.276490d8.chunk.css.map": "/Prueba-tecnica-Arkano/static/css/main.276490d8.chunk.css.map"
   }
 }
