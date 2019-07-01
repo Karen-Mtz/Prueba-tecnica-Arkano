@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -26,18 +30,64 @@ code {
 }
 
 .MuiPaper-root {
-  background-color: #222D32 !important;
   color: #fff !important
-}
+} 
 
 .MuiIconButton-root {
   color: white;
 }
 
 .MuiSvgIcon-root {
-  fill: white;
+  fill: white !important;
 }
 
 .MuiTypography-body1 {
   color: white;
+}
+
+.MuiAvatar-root {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.25rem;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  user-select: none;
+  border-radius: 50%;
+  justify-content: center;
+  margin-left: 7%;
+  margin-top: -18%;
+  margin-bottom: 20%;
+}
+
+.user {
+  margin-top: -36%;
+  margin-left: 31%;
+  font-size: 15px;
+  color: white;
+}
+
+.mainnavigation {
+  margin-left: 4%;
+  color: grey;
+}
+
+.dashboardData {
+  color: grey;
+  font-family: "Open Sans";
+  font-weight: 200
+}
+
+h6 {
+  color: rgb(63, 62, 62)!important;
+  font-weight: 550 !important;
+  font-family: "Open Sans";
+  font-size: 14px !important
+}
+
+.sbmt {
+  margin-left: 78%
 }

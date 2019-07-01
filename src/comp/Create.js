@@ -1,93 +1,127 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import firebase from '../Firebase';
-import { Link } from 'react-router-dom';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import MenuItem from '@material-ui/core/MenuItem';
-import TextField from '@material-ui/core/TextField';
+import React, { Component } from "react";
+import firebase from "../Firebase";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 class Create extends Component {
-    constructor() {
-        super();
-        this.ref = firebase.firestore().collection('dashboard');
-        this.state = {
-            title: '',
-            description: '',
-            author: ''
-        };
-    }
-    onChange = (e) => {
-        const state = this.state
-        state[e.target.name] = e.target.value;
-        this.setState(state);
-    }
-    onSubmit = (e) => {
-        e.preventDefault();
-        const { title, description, author } = this.state;
-        this.ref.add({
-            title,
-            description,
-            author
-        }).then((docRef) => {
-            this.setState({
-                title: '',
-                description: '',
-                author: '',
-            });
-            this.props.history.push('/')
-        })
-            .catch((error) => {
-                console.error('Error adding document: ', error);
-            });
-    }
-    render() {
-        const classes = useStyles();
-        const { title, description, author } = this.state;
-        return (
-            <form className={classes.container} noValidate autoComplete="off" onSubmit={this.onSubmit}>
-      <TextField
-        id="outlined-name"
-        label="Name"
-        className={classes.textField}
-        value={title}
-        onChange={this.onChange}
-        margin="normal"
-        variant="outlined"
-      />
+  constructor() {
+    super();
+    this.ref = firebase.firestore().collection("dashboard");
+    this.state = {
+      name: "",
+      quantity: "",
+      increase: "",
+      users: "",
+      visits: "",
+      date: ""
+    };
+  }
+  onChange = e => {
+    const state = this.state;
+    state[e.target.name] = e.target.value;
+    this.setState(state);
+  };
+  onSubmit = e => {
+    e.preventDefault();
+    const { name, quantity, increase, users, visits, date } = this.state;
+    this.ref
+      .add({
+        name,
+        quantity,
+        increase,
+        users,
+        visits,
+        date
+      })
+      .then(docRef => {
+        this.setState({
+          name: "",
+          quantity: "",
+          increase: "",
+          users: "",
+          visits: "",
+          date: ""
+        });
+        this.props.history.push("/dashboard");
+      })
+      .catch(error => {
+        console.error("Error adding document: ", error);
+      });
+  };
 
-
-
-            {/* <div class='container'>
-                <div class='panel panel-default'>
-                    <div class='panel-heading'>
-                        <h3 class='panel-title'>ADD COMENT</h3>
-                    </div>
-                    <div class='panel-body'>
-                        <h4><Link to='/' class='btn btn-primary'>Book List</Link></h4>
-                        <form onSubmit={this.onSubmit}>
-                            <div class='form-group'>
-                                <label for='title'>Title:</label>
-                                <input type='text' class='form-control' name='title'
-                                    value={title} onChange={this.onChange} placeholder='Title' />
-                            </div>
-                            <div class='form-group'>
-                                <label for='description'>Description:</label>
-                                <textArea class='form-control' name='description'
-                                    onChange={this.onChange} placeholder='Description' cols='80'
-                                    rows='3'>{description}</textArea>
-                            </div>
-                            <div class='form-group'>
-                                <label for='author'>Author:</label>
-                                <input type='text' class='form-control' name='author'
-                                    value={author} onChange={this.onChange} placeholder='Author' />
-                            </div>
-                            <button type='submit' class='btn btn-success'>Submit</button> */}
-                        </form>
-            //         </div>
-            //     </div>
-            // </div>
-        );
-    }
+  render() {
+    const { name, quantity, increase, users, visits, date } = this.state;
+    return (
+      <div class="container">
+        <Form onSubmit={this.onSubmit}>
+          <Form.Group size="sm" controlId="formBasicEmail">
+            <Form.Label>dashboard name</Form.Label>
+            <h6>Nombre del dashboard</h6>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              value={name}
+              onChange={this.onChange}
+              placeholder="Nombre del dashboard"
+            />
+            <br />
+            <h6>Cantidad de nuevas compras</h6>
+            <input
+              type="number"
+              class="form-control"
+              name="quantity"
+              value={quantity}
+              onChange={this.onChange}
+              placeholder="Nuevas compras"
+            />
+            <br />
+            <h6>Incremento de compras</h6>
+            <input
+              type="number"
+              class="form-control"
+              name="increase"
+              value={increase}
+              onChange={this.onChange}
+              placeholder="% incremento de compras"
+            />
+            <br />
+            <h6>Cantidad de nuevos usuarios</h6>
+            <input
+              type="number"
+              class="form-control"
+              name="users"
+              value={users}
+              onChange={this.onChange}
+              placeholder="Nuevos usuarios"
+            />
+            <br />
+            <h6>Cantidad de nuevas visitas</h6>
+            <input
+              type="number"
+              class="form-control"
+              name="visits"
+              value={visits}
+              onChange={this.onChange}
+              placeholder="Nuevas visitas"
+            />
+            <br />
+            <h6>Fecha</h6>
+            <input
+              type="date"
+              class="form-control"
+              name="date"
+              value={date}
+              onChange={this.onChange}
+            />
+          </Form.Group>
+          <Button className="sbmt" variant="primary" type="submit">
+            Ingresar datos
+          </Button>
+        </Form>
+      </div>
+    );
+  }
 }
+
 export default Create;
