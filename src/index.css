@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.MuiAppBar-colorPrimary {
+  color: #fff;
+  background-color: #3C8DBC !important;
+}
+
+.makeStyles-content-12 {
+  background-color: #ECF0F5 !important;
+}
+
+.makeStyles-drawerPaper-9 {
+  background-color: #222D32 !important;
+}
+
+.MuiPaper-root {
+  background-color: #222D32 !important;
+  color: #fff !important
+}
+
+.MuiIconButton-root {
+  color: white;
+}
+
+.MuiSvgIcon-root {
+  fill: white;
+}
+
+.MuiTypography-body1 {
+  color: white;
+}
