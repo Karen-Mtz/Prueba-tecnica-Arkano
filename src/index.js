@@ -10,8 +10,7 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   <Router>
     <div>
-      <Route exact path="/" component={Dash} />
-      <Route path="/dashboard" component={App} />
+      <Dash />
     </div>
   </Router>,
   document.getElementById("root")
