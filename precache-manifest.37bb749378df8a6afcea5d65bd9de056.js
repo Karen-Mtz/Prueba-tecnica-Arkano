@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5ff5102cfb55c7c6e4e4cbb355ee8983",
+    "revision": "66df030f2fc0e92123b0b4e2b11e5ddc",
     "url": "/Prueba-tecnica-Arkano/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Prueba-tecnica-Arkano/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "0616b8f81ea1763ea308",
+    "revision": "3b808ff7d20ceac8a069",
     "url": "/Prueba-tecnica-Arkano/static/css/main.49160344.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Prueba-tecnica-Arkano/static/js/2.ddf348c1.chunk.js"
   },
   {
-    "revision": "0616b8f81ea1763ea308",
-    "url": "/Prueba-tecnica-Arkano/static/js/main.e0fbcfe7.chunk.js"
+    "revision": "3b808ff7d20ceac8a069",
+    "url": "/Prueba-tecnica-Arkano/static/js/main.1a9b4dde.chunk.js"
   },
   {
     "revision": "d6fe9389ed1647eaa65d",
